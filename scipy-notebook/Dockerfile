@@ -34,7 +34,7 @@ RUN conda install --quiet --yes \
     'cloudpickle=0.5*' \
     'dill=0.2*' \
     'numba=0.38*' \
-    'dask[complete] \
+    'dask[complete]' \
     'bokeh=0.13*' \
     'sqlalchemy=1.2*' \
     'hdf5=1.10*' \
@@ -75,3 +75,8 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions /home/$NB_USER
 
 USER $NB_UID
+
+#Run Dask
+RUN dask-scheduler --port 1200 \
+    dask-worker --bokeh-port 1200 --nanny-port 1201 \
+    dask-worker --bokeh-port 1200 --nanny-port 1202
