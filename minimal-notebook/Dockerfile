@@ -31,5 +31,5 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     nano \
     && rm -rf /var/lib/apt/lists/*
 
-# Switch back to jovyan to avoid accidental container runs as root
+# Switch back to krh to avoid accidental container runs as root
 USER $NB_UID

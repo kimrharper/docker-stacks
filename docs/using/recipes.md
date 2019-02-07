@@ -117,7 +117,7 @@ Here is a [quick example NGINX configuration](https://gist.github.com/cboettig/8
 
 ## Host volume mounts and notebook errors
 
-If you are mounting a host directory as `/home/jovyan/work` in your container and you receive permission errors or connection errors when you create a notebook, be sure that the `jovyan` user (UID=1000 by default) has read/write access to the directory on the host. Alternatively, specify the UID of the `jovyan` user on container startup using the `-e NB_UID` option described in the [Common Features, Docker Options section](../using/common.html#Docker-Options)
+If you are mounting a host directory as `/home/krh/work` in your container and you receive permission errors or connection errors when you create a notebook, be sure that the `krh` user (UID=1000 by default) has read/write access to the directory on the host. Alternatively, specify the UID of the `krh` user on container startup using the `-e NB_UID` option described in the [Common Features, Docker Options section](../using/common.html#Docker-Options)
 
 Ref: [https://github.com/jupyter/docker-stacks/issues/199](https://github.com/jupyter/docker-stacks/issues/199)
 
@@ -182,7 +182,7 @@ Ref: [https://github.com/jupyter/docker-stacks/issues/127](https://github.com/ju
 
 ```
 import os
-os.environ['PYSPARK_SUBMIT_ARGS'] = '--jars /home/jovyan/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-shell'
+os.environ['PYSPARK_SUBMIT_ARGS'] = '--jars /home/krh/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-shell'
 import pyspark
 from pyspark.streaming.kafka import KafkaUtils
 from pyspark.streaming import StreamingContext
