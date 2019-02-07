@@ -34,7 +34,7 @@ RUN conda install --quiet --yes \
     'cloudpickle=0.5*' \
     'dill=0.2*' \
     'numba=0.38*' \
-    'dask==1.1.* \
+    'dask[complete] \
     'bokeh=0.13*' \
     'sqlalchemy=1.2*' \
     'hdf5=1.10*' \
