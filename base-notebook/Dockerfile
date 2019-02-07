@@ -108,8 +108,8 @@ EXPOSE 8888
 WORKDIR $HOME
 
 # Configure container startup
-# ENTRYPOINT ["tini", "-g", "--"]
-ENTRYPOINT ["jupyter", "lab", "--allow-root","--ip=0.0.0.0", "--no-browser"]
+ENTRYPOINT ["tini", "-g", "--"]
+# ENTRYPOINT ["jupyter", "lab", "--allow-root","--ip=0.0.0.0", "--no-browser"]
 # CMD ["start-notebook.sh"]
 
 # Add local files as late as possible to avoid cache busting
