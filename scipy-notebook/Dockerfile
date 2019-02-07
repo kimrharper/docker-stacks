@@ -35,6 +35,7 @@ RUN conda install --quiet --yes \
     'dill=0.2*' \
     'numba=0.38*' \
     'dask[complete]' \
+    'dask distributed --upgrade' \
     'bokeh=0.13*' \
     'sqlalchemy=1.2*' \
     'hdf5=1.10*' \
