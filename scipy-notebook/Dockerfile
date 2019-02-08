@@ -79,5 +79,5 @@ USER $NB_UID
 
 #Run Dask
 RUN dask-scheduler --port 1200 \
-    dask-worker --bokeh-port 1200 --nanny-port 1201 \
-    dask-worker --bokeh-port 1200 --nanny-port 1202
+    dask-worker --bokeh-port 1200 \
+    dask-worker --bokeh-port 1200
